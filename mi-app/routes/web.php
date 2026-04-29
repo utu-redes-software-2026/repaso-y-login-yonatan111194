@@ -49,3 +49,9 @@ Route::middleware(['auth'])->get('/panel', function () {
     // Muestra la vista 'panel'
     return view('panel');
 });
+// Ruta protegida del panel
+// Solo usuarios autenticados pueden acceder
+Route::middleware(['auth'])->get('/panel', function () {
+    // Muestra la vista panel.blade.php
+    return view('panel');
+});
